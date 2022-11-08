@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSK</title>
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.801);
+        }
+
+        .form p{
+            color:red;
+        }
+        #submit{
+            background-color:red;
+            color: white;
+        }
+
+        .form{
+            margin-top:20px ;
+            padding: 5%;
+            
+            color: white;
+        }
+        form{
+           padding-left: 5%;
+        }
+
+        .bottem{
+           text-align: center;
+        }
+        button{
+            border-style: outset;
+            border-color: white;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+    <p>..SUMBIT YOUR FORM..</p>    
+    <form action="" onsubmit="mail(); reset(); return false;">
+        <label for="adhaar">*Enter adhaar number.</label><br>
+        <input type="number" name="adhaar" id="adhaar" placeholder="Enter your adhaar number." required><span id="adhaar_error" style="color:red;"></span><br><br>
+        <label for="name">*Enter name.</label><br>
+        <input type="text" name="name" id="name" placeholder="Enter your name." required><br><br>
+        <label for="phone">*Enter phone number.</label><br>
+        <input type="number" id="phone" name="phone" placeholder="Enter phone number." required><span id="phone_error" style="color:red;"></span><br><br>
+        <legend>*Number is linked with adhaar:</legend>
+        <label for="yes">YES</label>
+        <input type="radio" name="linked" id="yes" value="yes" checked>
+        <label for="no">NO</label>
+        <input type="radio" name="linked" id="no" value="no"><br><br>
+
+        <label for="birthday">*Enter birthday.</label>
+        <input type="date" name="birthday" id="birthday" placeholder="Enter your birthday." required><br><br>
+        
+            <legend>*Choose your gender:</legend>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="male" checked>
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="female"><br><br>
+        <button type="submit" value="submit" onclick="return validate()">submite</button>
+        
+
+    </form>
+    <div class="bottem">
+    <p>Go to home page..</p>
+    <button><a href="../index.html">HOME</a></button>
+    </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="../static/java_file.js"></script>
+</body>
+</html>
